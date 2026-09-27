@@ -1,0 +1,56 @@
+:root {
+  --ink: #ece6d8;
+  --mute: #9a917f;
+  --paper: #12100c;
+  --panel: #1c1812;
+  --line: #3a3328;
+  --gold: #d6b25e;
+  --blood: #c45a3a;
+  --ok: #7ea36a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.45 "Iowan Old Style", Palatino, Georgia, serif; }
+.grain {
+  pointer-events: none; position: fixed; inset: 0; opacity: 0.07;
+  background-image: radial-gradient(#fff 0.6px, transparent 0.6px);
+  background-size: 3px 3px;
+}
+header, main, footer { max-width: 980px; margin: 0 auto; padding: 1.5rem; }
+.mark { letter-spacing: 0.18em; font-size: 0.7rem; color: var(--gold); margin: 0; }
+h1 { font-weight: 500; font-size: 3.2rem; margin: 0.2rem 0 0.4rem; }
+.lede { color: var(--mute); max-width: 36rem; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); padding: 1.1rem 1.2rem;
+  margin: 1rem 0; border-radius: 2px;
+}
+h2 { font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 0 0 0.8rem; }
+.row { display: flex; justify-content: space-between; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.mono, code, pre { font-family: ui-monospace, Menlo, monospace; font-size: 0.78rem; }
+.quiet { color: var(--mute); }
+.filebtn, button, select {
+  background: transparent; color: var(--ink); border: 1px solid var(--gold);
+  padding: 0.45rem 0.8rem; cursor: pointer; font: inherit; letter-spacing: 0.04em;
+}
+.filebtn input { display: none; }
+button:hover, .filebtn:hover { background: #2a2418; }
+audio { width: 100%; margin: 0.8rem 0 0.4rem; }
+.wave { height: 48px; background: repeating-linear-gradient(90deg, var(--line) 0 2px, transparent 2px 7px); opacity: 0.7; }
+.grid.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 800px) { .grid.two { grid-template-columns: 1fr; } }
+textarea {
+  width: 100%; background: #100e0a; color: var(--ink); border: 1px solid var(--line);
+  padding: 0.7rem; font: inherit; resize: vertical;
+}
+.plan {
+  background: #100e0a; border: 1px dashed var(--line); padding: 0.8rem;
+  white-space: pre-wrap; color: #d7c9a5; min-height: 7rem;
+}
+.meters { list-style: none; padding: 0; margin: 0; }
+.meters li { display: grid; grid-template-columns: 8rem 1fr 2.4rem; gap: 0.5rem; align-items: center; margin: 0.35rem 0; font-size: 0.85rem; }
+.bar { height: 7px; background: #2a2418; }
+.bar > i { display: block; height: 100%; background: var(--gold); width: 12%; }
+.takes { display: grid; gap: 0.7rem; margin-top: 0.8rem; }
+.take { border: 1px solid var(--line); padding: 0.8rem; }
+.take.marked { border-color: var(--ok); }
+.marks button { margin-right: 0.3rem; margin-top: 0.4rem; }
+footer { color: var(--mute); font-size: 0.85rem; }

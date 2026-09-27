@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goosebump Studio</title>
+  <link rel="stylesheet" href="studio.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header>
+    <p class="mark">RECORD ROOM · GOOSEBUMP ENGINE</p>
+    <h1>Studio</h1>
+    <p class="lede">A is locked. Grok plans. The hands render. You mark what the body did.</p>
+  </header>
+
+  <main>
+    <section class="card source">
+      <div class="row">
+        <div>
+          <h2>A · Original</h2>
+          <p id="sourceName" class="mono">No file loaded</p>
+          <p id="sourceHash" class="mono quiet">sha256 —</p>
+        </div>
+        <label class="filebtn">
+          Load song
+          <input id="file" type="file" accept="audio/*" />
+        </label>
+      </div>
+      <audio id="playerA" controls></audio>
+      <div class="wave" id="wave"></div>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <h2>Instruction</h2>
+        <textarea id="instruction" rows="4" placeholder="e.g. drop density for two beats before the chorus, then let the vocal sit closer"></textarea>
+        <div class="row">
+          <select id="proxy">
+            <option value="intimacy">intimacy / proximity</option>
+            <option value="impact">somatic impact</option>
+            <option value="tension">tension</option>
+            <option value="chills">chills</option>
+            <option value="groove">groove</option>
+            <option value="awe">awe</option>
+          </select>
+          <button id="planBtn" type="button">Write plan</button>
+        </div>
+        <pre id="plan" class="plan">No plan yet.</pre>
+      </article>
+
+      <article class="card">
+        <h2>Virtual Listener</h2>
+        <ul class="meters" id="meters"></ul>
+        <p class="quiet">These are hypothesised proxies, not dopamine. They move when a take is marked.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Takes</h2>
+        <button id="renderBtn" type="button">Render take from plan</button>
+      </div>
+      <p class="quiet">This page drafts the plan. A new waveform still needs the studio hands. This front end is the hearing and marking surface.</p>
+      <div id="takes" class="takes"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Original never overwritten. Human mark is the only response evidence.</p>
+  </footer>
+  <script src="studio.js"></script>
+</body>
+</html>
