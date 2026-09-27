@@ -1,0 +1,7 @@
+{
+  "name": "narrow-before-chorus",
+  "hypothesis": "Width drop then later expansion increases chorus impact",
+  "predicted_proxy": "somatic impact up at chorus entry",
+  "width": 0.65,
+  "gain_db": -1.5
+}
